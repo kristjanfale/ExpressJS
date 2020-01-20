@@ -1,12 +1,11 @@
 const express = require('express');
+const path = require('path');
 
 // Init express
 const app = express();
 
-// Create routes
-app.get('/', (req, res) => {
-  res.send('Hello World!!!');
-});
+// Set a static folder
+app.use(express.static(path.join(__dirname, 'public'))); // Set public folder as static folder
 
 // Listen on a port 5000 (for development) OR get port number in environment variable (for production)
 const PORT = process.env.PORT || 5000;

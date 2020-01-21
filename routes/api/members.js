@@ -35,6 +35,7 @@ router.post('/', (req, res) => {
 
   members.push(newMember); // Add new member to array
   res.json(members);
+  // res.redirect('/'); // If we are rendering templates
 });
 
 // Update member
